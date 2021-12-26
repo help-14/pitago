@@ -2,9 +2,8 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
-using FluentAvalonia.Styling;
 
-namespace avalonia
+namespace Pitago
 {
     class Program
     {

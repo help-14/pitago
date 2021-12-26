@@ -1,0 +1,36 @@
+<Application 
+  xmlns="https://github.com/avaloniaui"
+  xmlns:sty="using:FluentAvalonia.Styling"
+  xmlns:ui="using:FluentAvalonia.UI.Controls"
+  xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:cc="clr-namespace:AvaloniaEdit.CodeCompletion;assembly=AvaloniaEdit"
+  x:Class="Pitago.App">
+    <Application.Styles>
+      <FluentTheme Mode="Dark"/>
+      <StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml" />
+
+      <!--<Color x:Key="AcentColor" />
+      <SolidColorBrush x:Key="AcentBrush" Color="{StaticResources AcentColor}" />-->
+      
+      <!--Code completion-->
+      <Style Selector="cc|CompletionList">
+        <Setter Property="Template">
+          <ControlTemplate>
+            <cc:CompletionListBox Name="PART_ListBox" Background="Gray" BorderThickness="1" BorderBrush="LightGray" >
+              <cc:CompletionListBox.ItemTemplate>
+                <DataTemplate>
+                  <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="18">
+                    <Image Source="{Binding Image}"
+                           Width="15"
+                           Height="15"                          />
+                    <TextBlock VerticalAlignment="Center" Margin="10,0,0,0" Text="{Binding Content}" FontSize="15" FontFamily="Consolas" Foreground="#eeeeee"/>
+                  </StackPanel>
+                </DataTemplate>
+              </cc:CompletionListBox.ItemTemplate>
+            </cc:CompletionListBox>
+          </ControlTemplate>
+        </Setter>
+      </Style>
+    </Application.Styles>
+</Application>

@@ -2,23 +2,22 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace avalonia
+namespace Pitago
 {
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
-            InitializeComponent();
+            AvaloniaXamlLoader.Load(this);
 #if DEBUG
             this.AttachDevTools();
 #endif
+            InitializeComponent();
         }
 
         private void InitializeComponent()
         {
-            AvaloniaXamlLoader.Load(this);
-
-            //AvaloniaLocator.Current.GetService<FluentAvalonia.Styling.FluentAvaloniaTheme>().ForceNativeTitleBarToTheme(this);
         }
+
     }
 }

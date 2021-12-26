@@ -1,0 +1,111 @@
+<Window 
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:controls="clr-namespace:Pitago.Controls"
+  mc:Ignorable="d" Width="600" Height="450"
+  x:Class="Pitago.MainWindow"
+  Title="Pitago"
+  ExtendClientAreaToDecorationsHint="True"
+  TransparencyLevelHint="AcrylicBlur"
+  Background="Transparent">
+
+  <!-- <Window.Styles> -->
+  <!-- -->
+  <!--   <Style Selector="TabControl"> -->
+  <!--     <Setter Property="Margin" Value="0"/> -->
+  <!--     <Setter Property="Background" Value="Transparent"/> -->
+  <!--   </Style> -->
+  <!--   <Style Selector="TabControl WrapPanel"> -->
+  <!--     <Setter Property="Background" Value="Transparent"/> -->
+  <!--   </Style> -->
+  <!-- -->
+  <!--   <Style Selector="TabItem"> -->
+  <!--     <Setter Property="FontSize" Value="12"/> -->
+  <!--     <Setter Property="VerticalAlignment" Value="Center"/> -->
+  <!--     <Setter Property="VerticalContentAlignment" Value="Stretch"/> -->
+  <!--     <Setter Property="Background" Value="Transparent"/> -->
+  <!--     <Setter Property="Margin" Value="0"/> -->
+  <!--     <Setter Property="Padding" Value="10"/> -->
+  <!--   </Style> -->
+  <!--   ~1~ <Style Selector="TabItem:pointerover /template/ ContentPresenter#PART_ContentPresenter"> @1@ -->
+  <!--   ~1~   <Setter Property="Background" Value="#124078"/> @1@ -->
+  <!--   ~1~ </Style> @1@ -->
+  <!-- -->
+  <!--   <Style Selector="TabItem:focus"> -->
+  <!--     <Setter Property="Foreground" Value="#2B579A"/> -->
+  <!--     <Setter Property="Margin" Value="0"/> -->
+  <!--     <Setter Property="Padding" Value="10"/> -->
+  <!--   </Style> -->
+  <!--    -->
+  <!--   <Style Selector="TabItem:focus /template/ ContentPresenter#PART_ContentPresenter"> -->
+  <!--     <Setter Property="Background" Value=""/> -->
+  <!--   </Style> -->
+  <!-- -->
+  <!--   <Style Selector="TabItem:selected"> -->
+  <!--     <Setter Property="Foreground" Value="#2B579A"/> -->
+  <!--     <Setter Property="Margin" Value="0"/> -->
+  <!--     <Setter Property="Padding" Value="10"/> -->
+  <!--   </Style> -->
+  <!--   <Style Selector="TabItem:selected /template/ ContentPresenter#PART_ContentPresenter"> -->
+  <!--     <Setter Property="Background" Value=""/> -->
+  <!--   </Style> -->
+  <!-- -->
+  <!-- </Window.Styles> -->
+  
+  <Grid>
+    <ExperimentalAcrylicBorder IsHitTestVisible="False">
+      <ExperimentalAcrylicBorder.Material>
+        <ExperimentalAcrylicMaterial
+            BackgroundSource="Digger"
+            TintColor="Black"
+            TintOpacity="1"
+            MaterialOpacity="0.65" />
+      </ExperimentalAcrylicBorder.Material>
+    </ExperimentalAcrylicBorder>
+
+    <DockPanel>
+      <StackPanel 
+        Orientation="Horizontal"
+        DockPanel.Dock="Top"
+        Spacing="5"
+        Margin="3">
+        <Button FontFamily="Segoe Fluent Icons" Content="" />
+        <Button FontFamily="Segoe Fluent Icons" Content=""/>
+        <Button FontFamily="Segoe Fluent Icons" Content="" />
+        <Button FontFamily="Segoe Fluent Icons" Content="" />
+      </StackPanel>
+      
+      <controls:Notepad
+        Margin="0"/>
+      <!-- <TabControl> -->
+      <!--   <TabItem> -->
+      <!--     <TabItem.Header> -->
+      <!--       <controls:TabHeader Text="Tab 1"></controls:TabHeader> -->
+      <!--     </TabItem.Header> -->
+      <!--     <controls:Notepad/> -->
+      <!--   </TabItem> -->
+      <!--   <TabItem> -->
+      <!--     <TabItem.Header> -->
+      <!--       <controls:TabHeader Text="Tab 2"></controls:TabHeader> -->
+      <!--     </TabItem.Header> -->
+      <!--     <StackPanel> -->
+      <!--       <TextBlock Text="I am in the triangle page ! I'll put a button to show you that each page contains what you want." HorizontalAlignment="Left" VerticalAlignment="Center"/> -->
+      <!--       <Button>A button in the triangle page !</Button> -->
+      <!--     </StackPanel> -->
+      <!--   </TabItem> -->
+      <!--   <TabItem> -->
+      <!--     <TabItem.Header> -->
+      <!--       <controls:TabHeader Text="Tab 3"></controls:TabHeader> -->
+      <!--     </TabItem.Header> -->
+      <!--     <StackPanel Orientation="Horizontal"> -->
+      <!--       <TextBlock Text="Square : " HorizontalAlignment="Left" VerticalAlignment="Center"/> -->
+      <!--       <Rectangle Fill="Blue" Width="63" Height="41"/> -->
+      <!--     </StackPanel> -->
+      <!--   </TabItem> -->
+      <!-- </TabControl> -->
+    </DockPanel>
+  </Grid>
+    
+</Window>
