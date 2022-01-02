@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pitago", "pitago\pitago.csproj", "{EB7724BF-466C-4E87-84E2-4EDF620D703D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitago.Win", "pitago\Pitago.Win.csproj", "{EB7724BF-466C-4E87-84E2-4EDF620D703D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
