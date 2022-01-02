@@ -3,8 +3,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <RootNamespace>Pitago</RootNamespace>
-    <AssemblyName>Pitago</AssemblyName>
+    <RootNamespace>Pitago.Win</RootNamespace>
+    <AssemblyName>Pitago.Win</AssemblyName>
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
@@ -17,12 +17,14 @@
     <PackageReference Include="Avalonia.Diagnostics" Version="0.10.11" />
    </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AvaloniaEdit\src\AvaloniaEdit\AvaloniaEdit.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <AvaloniaResource Include="Assets\Fonts\**" />
+    <ProjectReference Include="..\Pitago\Pitago.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="App.axaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

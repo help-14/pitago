@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitago.Win", "pitago\Pitago.Win.csproj", "{EB7724BF-466C-4E87-84E2-4EDF620D703D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitago.Win", "Pitago.Win\Pitago.Win.csproj", "{EB7724BF-466C-4E87-84E2-4EDF620D703D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitago", "Pitago\Pitago.csproj", "{0D293358-3F5A-4D49-829B-0FBABA5A6AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitago.Linux", "Pitago.Linux\Pitago.Linux.csproj", "{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitago.Mac", "Pitago.Mac\Pitago.Mac.csproj", "{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{A5B00FBF-4D2B-411D-9CAB-BE2912778E86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,26 @@ Global
 		{EB7724BF-466C-4E87-84E2-4EDF620D703D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB7724BF-466C-4E87-84E2-4EDF620D703D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB7724BF-466C-4E87-84E2-4EDF620D703D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D293358-3F5A-4D49-829B-0FBABA5A6AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D293358-3F5A-4D49-829B-0FBABA5A6AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D293358-3F5A-4D49-829B-0FBABA5A6AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D293358-3F5A-4D49-829B-0FBABA5A6AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB7724BF-466C-4E87-84E2-4EDF620D703D} = {A5B00FBF-4D2B-411D-9CAB-BE2912778E86}
+		{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE} = {A5B00FBF-4D2B-411D-9CAB-BE2912778E86}
+		{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6} = {A5B00FBF-4D2B-411D-9CAB-BE2912778E86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34BB8134-33C8-4B05-863C-A4AF839F1AB3}

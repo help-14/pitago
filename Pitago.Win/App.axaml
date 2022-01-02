@@ -5,7 +5,7 @@
   xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:cc="clr-namespace:AvaloniaEdit.CodeCompletion;assembly=AvaloniaEdit"
-  x:Class="Pitago.App">
+  x:Class="Pitago.Win.App">
     <Application.Styles>
       <FluentTheme Mode="Dark"/>
       <StyleInclude Source="avares://AvaloniaEdit/AvaloniaEdit.xaml" />

@@ -1,9 +1,8 @@
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace Pitago
+namespace Pitago.Linux
 {
     public class App : Application
     {
@@ -16,7 +15,7 @@ namespace Pitago
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow();
+                desktop.MainWindow = new Pitago.MainWindow();
             }
 
             base.OnFrameworkInitializationCompleted();
