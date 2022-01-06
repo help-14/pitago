@@ -53,5 +53,11 @@ namespace Pitago.Calculation
                 result
             );
         }
+
+        private bool IsLineCalculated(string line)
+        {
+            return line.Contains("=>") ||
+                line.Contains("=") && line.EvalBoolean() == AngouriMath.Entity.Boolean.True;
+        }
     }
 }
