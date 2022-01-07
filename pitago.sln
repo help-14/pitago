@@ -5,13 +5,18 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitago.Win", "Pitago.Win\Pitago.Win.csproj", "{EB7724BF-466C-4E87-84E2-4EDF620D703D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitago", "Pitago\Pitago.csproj", "{0D293358-3F5A-4D49-829B-0FBABA5A6AAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitago", "Pitago\Pitago.csproj", "{0D293358-3F5A-4D49-829B-0FBABA5A6AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitago.Linux", "Pitago.Linux\Pitago.Linux.csproj", "{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitago.Linux", "Pitago.Linux\Pitago.Linux.csproj", "{6AE0946D-F2BA-45FD-9CC6-4EC1B59B5BDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitago.Mac", "Pitago.Mac\Pitago.Mac.csproj", "{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitago.Mac", "Pitago.Mac\Pitago.Mac.csproj", "{2DB8A251-A49C-4D7A-8889-4CB2BAABECE6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{A5B00FBF-4D2B-411D-9CAB-BE2912778E86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDC448A1-0CA8-4B1D-A399-0B3931F8939E}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

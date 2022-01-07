@@ -5,6 +5,9 @@ namespace Pitago.Calculation
 {
     public class CalculationProcessor
     {
+        private const string ArrowSign = "=>";
+        private const string EqualSign = "=";
+
         public string Process(string math, bool formatResult = true)
         {
             try
@@ -48,16 +51,39 @@ namespace Pitago.Calculation
         {
             return string.Concat(
                 math.EndsWith(' ') ? "" : " ",
-                math.Contains('=') ? "=>" : "=",
+                math.Contains(EqualSign) ? ArrowSign : EqualSign,
                 " ",
                 result
             );
         }
 
-        private bool IsLineCalculated(string line)
+        public bool IsLineCalculated(string line)
         {
-            return line.Contains("=>") ||
-                line.Contains("=") && line.EvalBoolean() == AngouriMath.Entity.Boolean.True;
+            return line.Contains(ArrowSign) ||
+                line.Contains(EqualSign) && line.EvalBoolean() == AngouriMath.Entity.Boolean.True;
+        }
+
+        private string GetOriginalMath(string text)
+        {
+            if (text.Contains(ArrowSign))
+                return text.Substring(0, text.IndexOf(ArrowSign)).Trim();
+            else if (text.Contains(EqualSign))
+                return text.Substring(0, text.IndexOf(EqualSign)).Trim();
+            else
+                return text.Trim();
+        }
+
+        public string CalculateLine(string line, bool recalculate = true)
+        {
+            if (IsLineCalculated(line))
+            {
+                if(recalculate)
+                    return Process(GetOriginalMath(line));
+                return line;
+            }
+            else
+                return Process(line);
         }
     }
+
 }
