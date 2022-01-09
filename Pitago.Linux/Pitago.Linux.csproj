@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-linux</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
 	<RootNamespace>Pitago</RootNamespace>
 	<AssemblyName>Pitago</AssemblyName>
@@ -14,13 +14,19 @@
 	<Product>Pitago</Product>
 	<EnableNETAnalyzers>False</EnableNETAnalyzers>
 	<AnalysisLevel>none</AnalysisLevel>
+	<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+	<PublishReadyToRun>true</PublishReadyToRun>
+	<PublishSingleFile>true</PublishSingleFile>
+	<PublishTrimmed>true</PublishTrimmed>
   </PropertyGroup>
   <ItemGroup>
     <None Remove=".gitignore" />
     <None Remove="icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <Content Include="icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.11" />
