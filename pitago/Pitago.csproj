@@ -4,6 +4,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+    <AssemblyName>Pitago.Lib</AssemblyName>
   </PropertyGroup>
   
   <ItemGroup>
@@ -15,7 +18,7 @@
     <PackageReference Include="Avalonia" Version="0.10.11" />
     <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.10.9" />
     <PackageReference Include="Avalonia.Desktop" Version="0.10.11" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.11" />
+	<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.11" />
   </ItemGroup>
   
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿using Avalonia;
 
-namespace Pitago.Win
+namespace Pitago
 {
     class Program
     {

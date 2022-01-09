@@ -8,6 +8,7 @@ namespace Pitago.Calculation
         private const string ArrowSign = "=>";
         private const string EqualSign = "=";
         private const char NewLineSign = '\n';
+        private const char ReturnSign = '\r';
 
         public string Process(string math, bool formatResult = true)
         {
@@ -31,6 +32,7 @@ namespace Pitago.Calculation
                 }
                 else // Varriable found, validate the varriable and calculate, if calculation failed then try simplify the math
                 {
+                    //TODO save the varriable
                     result = math.Simplify().Stringize();
                 }
 
@@ -50,11 +52,15 @@ namespace Pitago.Calculation
 
         public string ProcessDocument(string document, bool calculate = true)
         {
+            document = document
+                .Replace($"{ReturnSign}{NewLineSign}", NewLineSign.ToString())
+                .Replace(ReturnSign.ToString(), "");
+
             var lines = document.Split(NewLineSign);
             for (var i = 0; i < lines.Length; i++)
             {
                 lines[i] = GetOriginalMath(lines[i]);
-                if (calculate) lines[i] = Process(lines[i]);
+                if (calculate) lines[i] = String.Concat(lines[i], Process(lines[i]));
             }
             return string.Join(NewLineSign, lines);
         }

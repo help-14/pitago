@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
-namespace Pitago.Linux
+namespace Pitago
 {
     internal class Program
     {

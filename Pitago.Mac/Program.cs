@@ -1,6 +1,6 @@
 ﻿using Avalonia;
 
-namespace Pitago.Mac
+namespace Pitago
 {
     class Program
     {

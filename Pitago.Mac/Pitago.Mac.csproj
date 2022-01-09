@@ -1,11 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-macos</TargetFramework>
     <Nullable>enable</Nullable>
+	<RootNamespace>Pitago</RootNamespace>
+	<AssemblyName>Pitago</AssemblyName>
+	<ApplicationIcon>icon.ico</ApplicationIcon>
+	<Version>0.1.0</Version>
+	<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+	<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
+	<RunAnalyzers>false</RunAnalyzers>
+	<Company>Help-14</Company>
+	<Product>Pitago</Product>
+	<EnableNETAnalyzers>False</EnableNETAnalyzers>
+	<AnalysisLevel>none</AnalysisLevel>
   </PropertyGroup>
   <ItemGroup>
     <None Remove=".gitignore" />
+    <None Remove="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.11" />

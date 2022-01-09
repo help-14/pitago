@@ -17,6 +17,8 @@ namespace Pitago
             this.AttachDevTools();
 #endif
             notePad = this.FindControl<Notepad>("notePad");
+
+            CheckForUpdate();
         }
 
 #region AppFunction
@@ -63,6 +65,18 @@ namespace Pitago
             notePad.Save(this);
         }
 
+        /// <summary>
+        /// Check for update, show notice on status bar if update available
+        /// </summary>
+        private async Task CheckForUpdate()
+        {
+            if(await Utils.Update.CanUpdate())
+            {
+                var label = this.FindControl<Label>("UpdateNotice");
+                if(label != null) label.IsVisible = true;
+            }
+        }
+
 #endregion
 
 #region Events
@@ -80,6 +94,11 @@ namespace Pitago
         public void SaveOnClick(object sender, RoutedEventArgs args)
         {
             SaveCurrentTab();
+        }
+
+        public void UpdateOnTapped(object sender, RoutedEventArgs args)
+        {
+            Utils.Update.RunUpdate();
         }
 
 #endregion

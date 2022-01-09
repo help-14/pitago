@@ -1,4 +1,4 @@
-<Window 
+<Window
   xmlns="https://github.com/avaloniaui"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,47 +11,68 @@
   TransparencyLevelHint="AcrylicBlur"
   Background="Transparent">
 
-   <Window.Styles>
-     <Style Selector="Button.Icon">
-       <Setter Property="FontFamily" Value="avares://Pitago/Assets/Fonts/Segoe_Fluent_Icons.ttf#Segoe Fluent Icons"/>
-     </Style>
-   </Window.Styles> 
-  
-  <Grid>
-    <ExperimentalAcrylicBorder IsHitTestVisible="False">
-      <ExperimentalAcrylicBorder.Material>
-        <ExperimentalAcrylicMaterial
-            BackgroundSource="Digger"
-            TintColor="Black"
-            TintOpacity="1"
-            MaterialOpacity="0.65" />
-      </ExperimentalAcrylicBorder.Material>
-    </ExperimentalAcrylicBorder>
+	<Window.Styles>
+		<Style Selector="Button.Icon">
+			<Setter Property="FontFamily" Value="avares://Pitago.Lib/Assets/Fonts/Segoe_Fluent_Icons.ttf#Segoe Fluent Icons"/>
+		</Style>
+	</Window.Styles>
 
-    <DockPanel>
-      <StackPanel 
-        Orientation="Horizontal"
-        DockPanel.Dock="Top"
-        Spacing="5"
-        Margin="3">
-        <Button 
-			Click="NewOnClick"
-			Classes="Icon" 
-			Content="" />
-        <Button 
-			Click="OpenOnClick"
-			Classes="Icon" 
-			Content=""/>
-        <Button 
-			Click="SaveOnClick"
-			Classes="Icon" 
-			Content=""/>
-      </StackPanel>
-      
-      <controls:Notepad
-		  x:Name="notePad"
-        Margin="0"/>
-    </DockPanel>
-  </Grid>
-    
+	<Grid>
+		<ExperimentalAcrylicBorder IsHitTestVisible="False">
+			<ExperimentalAcrylicBorder.Material>
+				<ExperimentalAcrylicMaterial
+					BackgroundSource="Digger"
+					TintColor="Black"
+					TintOpacity="1"
+					MaterialOpacity="0.65" />
+			</ExperimentalAcrylicBorder.Material>
+		</ExperimentalAcrylicBorder>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			
+			<StackPanel
+			  Orientation="Horizontal"
+			  Grid.Row="0"
+			  Spacing="5"
+			  Margin="3">
+				<Button
+					Click="NewOnClick"
+					Classes="Icon"
+					Content="" />
+				<Button
+					Click="OpenOnClick"
+					Classes="Icon"
+					Content=""/>
+				<Button
+					Click="SaveOnClick"
+					Classes="Icon"
+					Content=""/>
+			</StackPanel>
+
+			<controls:Notepad
+				Grid.Row="1"
+				x:Name="notePad"
+				Margin="0"/>
+
+			<Grid
+				x:Name="StatusBar"
+				Grid.Row="2"
+				DockPanel.Dock="Bottom">
+				<Label 
+					x:Name="UpdateNotice"
+					Margin="10,5,10,5"
+					Cursor="Hand"
+					IsVisible="False"
+					Tapped="UpdateOnTapped"
+					Content="New version detected! Update now!"/>
+			</Grid>
+
+		</Grid>
+	</Grid>
+
 </Window>
