@@ -7,6 +7,7 @@ namespace Pitago.Calculation
     {
         private const string ArrowSign = "=>";
         private const string EqualSign = "=";
+        private const char NewLineSign = '\n';
 
         public string Process(string math, bool formatResult = true)
         {
@@ -47,6 +48,17 @@ namespace Pitago.Calculation
             }
         }
 
+        public string ProcessDocument(string document, bool calculate = true)
+        {
+            var lines = document.Split(NewLineSign);
+            for (var i = 0; i < lines.Length; i++)
+            {
+                lines[i] = GetOriginalMath(lines[i]);
+                if (calculate) lines[i] = Process(lines[i]);
+            }
+            return string.Join(NewLineSign, lines);
+        }
+
         private string FormatResult(string math, string result)
         {
             return string.Concat(
@@ -65,6 +77,9 @@ namespace Pitago.Calculation
 
         private string GetOriginalMath(string text)
         {
+            if (!IsLineCalculated(text)) 
+                return text.Trim();
+
             if (text.Contains(ArrowSign))
                 return text.Substring(0, text.IndexOf(ArrowSign)).Trim();
             else if (text.Contains(EqualSign))
@@ -83,6 +98,18 @@ namespace Pitago.Calculation
             }
             else
                 return Process(line);
+        }
+
+        // Remove calculation result from all lines
+        public string RemoveCalculationResult(string document)
+        {
+            return ProcessDocument(document, false);
+        }
+
+        // Re-do calculation on all lines
+        public string ReCalculationResult(string document)
+        {
+            return ProcessDocument(document, true);
         }
     }
 

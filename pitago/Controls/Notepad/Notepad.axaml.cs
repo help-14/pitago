@@ -57,8 +57,9 @@ namespace Pitago.Controls
 
         private void OnTextEntered(object sender, TextInputEventArgs e)
         {
-            var currentLine = GetCurrentLine();
+            IsChangesSaved = false;
 
+            var currentLine = GetCurrentLine();
             if (e.Text == "\n")
             {
                 CalculateLine(currentLine.PreviousLine);

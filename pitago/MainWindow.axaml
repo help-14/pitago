@@ -34,12 +34,22 @@
         DockPanel.Dock="Top"
         Spacing="5"
         Margin="3">
-        <Button Classes="Icon" Content="" />
-        <Button Classes="Icon" Content=""/>
-        <Button Classes="Icon" Content=""/>
+        <Button 
+			Click="NewOnClick"
+			Classes="Icon" 
+			Content="" />
+        <Button 
+			Click="OpenOnClick"
+			Classes="Icon" 
+			Content=""/>
+        <Button 
+			Click="SaveOnClick"
+			Classes="Icon" 
+			Content=""/>
       </StackPanel>
       
       <controls:Notepad
+		  x:Name="notePad"
         Margin="0"/>
     </DockPanel>
   </Grid>

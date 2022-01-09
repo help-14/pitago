@@ -49,20 +49,11 @@ namespace Pitago.Controls
                 Margin = new Thickness(_textEditor.Padding.Left + rect.X + rect.Width, rect.Y, 0, 0)
             };
             _resultBox.Children.Add(label);
+        }
 
-            //for (var i = 0; i < _textEditor.Document.Lines.Count; i++)
-            //{
-            //    if (_textEditor.Document.Lines[i].ToString().Trim().Length == 0) continue;
-            //    var rectBox = new Avalonia.Controls.Border();
-            //    rectBox.BorderBrush = new SolidColorBrush(Colors.Red);
-            //    rectBox.BorderThickness = new Thickness(1);
-
-            //    var rect = AvaloniaEdit.Rendering.BackgroundGeometryBuilder.GetRectsForSegment(_textEditor.TextArea.TextView, currentLine).FirstOrDefault();
-            //    rectBox.Margin = new Thickness(rect.X, rect.Y, 0, 0);
-            //    rectBox.Width = rect.Width;
-            //    rectBox.Height = rect.Height;
-            //    _resultBox.Children.Add(rectBox);
-            //}
+        public void CalculateDocument()
+        {
+            _textEditor.Text = _calProcessor.ProcessDocument(_textEditor.Text);
         }
 
         private void ClearPreviewResult()
