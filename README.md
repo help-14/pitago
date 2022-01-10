@@ -1,6 +1,9 @@
 # Pitago
 A modern calculator for mouse and keyboard. Require .Net 6 runtime.
 
+
+<img src="https://i.imgur.com/JooIU4w.png" />
+
 ## Features
 - Solve math and equation.
 - Preview the result.
