@@ -3,6 +3,7 @@ using Avalonia.Media;
 using AvaloniaEdit.Document;
 using AvaloniaEdit.Editing;
 using AvaloniaEdit.Rendering;
+using System;
 using System.Linq;
 
 namespace Pitago.Controls

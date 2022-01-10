@@ -1,4 +1,6 @@
 ﻿using Avalonia.Controls;
+using System;
+using System.IO;
 
 namespace Pitago.Controls
 {

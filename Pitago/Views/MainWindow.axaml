@@ -5,7 +5,7 @@
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:controls="clr-namespace:Pitago.Controls"
   mc:Ignorable="d" Width="600" Height="450"
-  x:Class="Pitago.MainWindow"
+  x:Class="Pitago.Views.MainWindow"
   Title="Pitago"
   ExtendClientAreaToDecorationsHint="True"
   TransparencyLevelHint="AcrylicBlur"
@@ -13,7 +13,7 @@
 
 	<Window.Styles>
 		<Style Selector="Button.Icon">
-			<Setter Property="FontFamily" Value="avares://Pitago.Lib/Assets/Fonts/Segoe_Fluent_Icons.ttf#Segoe Fluent Icons"/>
+			<Setter Property="FontFamily" Value="avares://Pitago/Assets/Fonts/Segoe_Fluent_Icons.ttf#Segoe Fluent Icons"/>
 		</Style>
 	</Window.Styles>
 

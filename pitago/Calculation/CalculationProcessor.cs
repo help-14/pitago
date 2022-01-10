@@ -1,4 +1,5 @@
 ﻿using AngouriMath.Extensions;
+using System;
 using System.Text.RegularExpressions;
 
 namespace Pitago.Calculation

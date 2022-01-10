@@ -3,8 +3,10 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Pitago.Controls;
+using Pitago.Utils;
+using System.Threading.Tasks;
 
-namespace Pitago
+namespace Pitago.Views
 {
     public partial class MainWindow : Window
     {
@@ -70,7 +72,7 @@ namespace Pitago
         /// </summary>
         private async Task CheckForUpdate()
         {
-            if(await Utils.Update.CanUpdate())
+            if(await Update.CanUpdate())
             {
                 var label = this.FindControl<Label>("UpdateNotice");
                 if(label != null) label.IsVisible = true;
@@ -98,7 +100,7 @@ namespace Pitago
 
         public void UpdateOnTapped(object sender, RoutedEventArgs args)
         {
-            Utils.Update.RunUpdate();
+            Update.RunUpdate();
         }
 
 #endregion

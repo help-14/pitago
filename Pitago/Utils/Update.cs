@@ -1,5 +1,8 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.Net.Http;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace Pitago.Utils
 {
