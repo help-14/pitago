@@ -14,6 +14,11 @@ namespace Pitago.Controls
             return _textEditor.Document.GetLineByOffset(offset);
         }
 
+        private string GetLineText(DocumentLine line)
+        {
+            return _textEditor.Document.GetText(line.Offset, line.Length);
+        }
+
         private DocumentLine GetCurrentLine()
         {
             return GetLine(_textEditor.SelectionStart + _textEditor.SelectionLength);

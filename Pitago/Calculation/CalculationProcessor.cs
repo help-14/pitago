@@ -1,15 +1,12 @@
 ﻿using AngouriMath.Extensions;
 using System;
 using System.Text.RegularExpressions;
+using Pitago;
 
 namespace Pitago.Calculation
 {
     public class CalculationProcessor
     {
-        private const string ArrowSign = "=>";
-        private const string EqualSign = "=";
-        private const char NewLineSign = '\n';
-        private const char ReturnSign = '\r';
 
         public string Process(string math, bool formatResult = true)
         {
@@ -54,23 +51,23 @@ namespace Pitago.Calculation
         public string ProcessDocument(string document, bool calculate = true)
         {
             document = document
-                .Replace($"{ReturnSign}{NewLineSign}", NewLineSign.ToString())
-                .Replace(ReturnSign.ToString(), "");
+                .Replace($"{Constants.String.ReturnSign}{Constants.String.NewLineSign}", Constants.String.NewLineSign.ToString())
+                .Replace(Constants.String.ReturnSign.ToString(), "");
 
-            var lines = document.Split(NewLineSign);
+            var lines = document.Split(Constants.String.NewLineSign);
             for (var i = 0; i < lines.Length; i++)
             {
                 lines[i] = GetOriginalMath(lines[i]);
                 if (calculate) lines[i] = String.Concat(lines[i], Process(lines[i]));
             }
-            return string.Join(NewLineSign, lines);
+            return string.Join(Constants.String.NewLineSign, lines);
         }
 
         private string FormatResult(string math, string result)
         {
             return string.Concat(
                 math.EndsWith(' ') ? "" : " ",
-                math.Contains(EqualSign) ? ArrowSign : EqualSign,
+                math.Contains(Constants.String.EqualSign) ? Constants.String.ArrowSign : Constants.String.EqualSign,
                 " ",
                 result
             );
@@ -78,8 +75,8 @@ namespace Pitago.Calculation
 
         public bool IsLineCalculated(string line)
         {
-            return line.Contains(ArrowSign) ||
-                line.Contains(EqualSign) && line.EvalBoolean() == AngouriMath.Entity.Boolean.True;
+            return line.Contains(Constants.String.ArrowSign) ||
+                line.Contains(Constants.String.EqualSign) && line.EvalBoolean() == AngouriMath.Entity.Boolean.True;
         }
 
         private string GetOriginalMath(string text)
@@ -87,10 +84,10 @@ namespace Pitago.Calculation
             if (!IsLineCalculated(text)) 
                 return text.Trim();
 
-            if (text.Contains(ArrowSign))
-                return text.Substring(0, text.IndexOf(ArrowSign)).Trim();
-            else if (text.Contains(EqualSign))
-                return text.Substring(0, text.IndexOf(EqualSign)).Trim();
+            if (text.Contains(Constants.String.ArrowSign))
+                return text.Substring(0, text.IndexOf(Constants.String.ArrowSign)).Trim();
+            else if (text.Contains(Constants.String.EqualSign))
+                return text.Substring(0, text.IndexOf(Constants.String.EqualSign)).Trim();
             else
                 return text.Trim();
         }

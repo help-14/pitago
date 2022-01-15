@@ -25,7 +25,9 @@
     <AvaloniaResource Include="Assets\Fonts\Segoe_Fluent_Icons.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <Content Include="icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AngouriMath" Version="1.3.0" />

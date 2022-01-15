@@ -57,15 +57,17 @@ namespace Pitago.Controls
 
         private void OnTextEntered(object sender, TextInputEventArgs e)
         {
+            if(string.IsNullOrEmpty(e.Text)) return;
             IsChangesSaved = false;
 
             var currentLine = GetCurrentLine();
-            if (e.Text == "\n")
-            {
+            ClearPreviewResult();
+
+            if (e.Text.Equals(Constants.String.NewLineSign))
                 CalculateLine(currentLine.PreviousLine);
-                ClearPreviewResult();
-            }
-            else
+            else if (e.Text.Length > 1 && e.Text.Contains(Constants.String.NewLineSign))
+                CalculateDocument();
+            else if (_calProcessor.IsLineCalculated(GetLineText(currentLine)) == false)
                 PreviewCalculation(currentLine);
         }
 
