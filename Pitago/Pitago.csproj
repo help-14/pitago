@@ -6,7 +6,7 @@
     <RootNamespace>Pitago</RootNamespace>
     <AssemblyName>Pitago</AssemblyName>
     <ApplicationIcon>icon.ico</ApplicationIcon>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
 	<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
 	<RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
 	<RunAnalyzers>false</RunAnalyzers>

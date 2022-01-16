@@ -1,0 +1,1 @@
+MainPackage=C:\Users\Nhan\Documents\Code\pitago\PitagoPackagingProject\bin\ARM64\Release\PitagoPackagingProject_0.2.0.0_ARM64.appx

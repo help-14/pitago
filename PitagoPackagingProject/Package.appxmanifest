@@ -9,7 +9,7 @@
   <Identity
     Name="38574Help-14.Pitago"
     Publisher="CN=6AADBDE8-FC6E-44A8-8DC6-9C421075C332"
-    Version="1.0.0.0" />
+    Version="0.2.0.0" />
 
   <Properties>
     <DisplayName>Pitago</DisplayName>
